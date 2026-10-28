@@ -1,0 +1,170 @@
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fff7ed, #fef3c7, #fce7f3);
+  min-height: 100vh;
+  padding: 20px;
+  color: #3b1f0a;
+}
+
+/* ===== HEADER UTAMA ===== */
+body > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #f97316, #ec4899, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 30px 0 10px;
+  letter-spacing: 2px;
+  text-shadow: none;
+}
+
+/* ===== SECTION / BAB ===== */
+section.bab {
+  background: linear-gradient(145deg, #fffbeb, #fff0f6);
+  border-left: 6px solid #f97316;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin: 24px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.15);
+  transition: transform 0.2s ease;
+}
+
+section.bab:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== HEADING BAB ===== */
+section.bab h1 {
+  font-size: 1.6rem;
+  color: #ea580c;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #fcd34d;
+  padding-bottom: 8px;
+}
+
+section.bab h2 p,
+section.bab p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #5b3a1a;
+  margin-bottom: 14px;
+}
+
+/* ===== LIST ===== */
+ol {
+  padding-left: 24px;
+}
+
+ol li {
+  margin: 6px 0;
+  color: #c2410c;
+  font-weight: 500;
+}
+
+/* ===== GAMBAR ===== */
+img {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  display: block;
+  margin: 10px 0;
+}
+
+div[style*="text-align: center"] {
+  font-style: italic;
+  color: #9a3412;
+  margin-top: 6px;
+}
+
+/* ===== TABEL ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+}
+
+thead tr {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+  color: white;
+}
+
+thead th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+tbody tr {
+  background: #fff7ed;
+  border-bottom: 1px solid #fed7aa;
+  transition: background 0.2s;
+}
+
+tbody tr:hover {
+  background: #ffedd5;
+}
+
+tbody td {
+  padding: 10px 16px;
+  color: #431407;
+}
+
+/* ===== FIELDSET / BOX BUAH ===== */
+fieldset {
+  border: 2px solid #fb923c;
+  border-radius: 14px;
+  padding: 20px 24px !important;
+  background: linear-gradient(135deg, #fff7ed, #fce7f3);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.2);
+  display: inline-block;
+}
+
+legend {
+  background: linear-gradient(90deg, #f97316, #ec4899);
+  color: white;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===== SELECT DROPDOWN ===== */
+select {
+  padding: 8px 14px;
+  border: 2px solid #f97316;
+  border-radius: 8px;
+  background: white;
+  color: #7c2d12;
+  font-size: 0.95rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+select:focus {
+  border-color: #ec4899;
+}
+
+/* ===== GAMBAR BUAH ===== */
+#gambarBuah {
+  margin: 12px auto;
+  border: 3px solid #fb923c;
+}
+
+#namaBuah {
+  color: #ea580c;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 6px;
+}

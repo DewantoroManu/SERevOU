@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevOUBootcampSE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <h1><p style="white-space: nowrap;">🍽️ WEB Testing SE RevOU</p></h1>
+
+    <!-- BAB 1 : LIST -->
+    <section class="bab">
+        <h1>Bab 1 — List</h1>
+        <h2><p style="font-weight: normal; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia explicabo dolorum minima impedit alias atque neque eius quae maxime, nulla fugit quasi obcaecati soluta deleniti sit reprehenderit suscipit? Iusto, ea! List :</p></h2>
+        <ol>
+            <li><p style="white-space: inherit;">ini list 1</p></li>
+            <li><p style="white-space: inherit;">ini list 2</p></li>
+        </ol>
+    </section>
+
+    <!-- BAB 2 : IMAGE -->
+    <section class="bab">
+        <h1>Bab 2 — Image</h1>
+        <h2><p style="font-weight: normal; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia explicabo dolorum minima impedit alias atque neque eius quae maxime, nulla fugit quasi obcaecati soluta deleniti sit reprehenderit suscipit? Iusto, ea! Image :</p></h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT82FxKnbbd2W1rUsbVZZ-xf9PdnzwY29-ePDRHXBOCSA&s=10" alt="mcrae impreza" width="350">
+        <div style="text-align: center;">Mcrae Impreza</div>
+    </section>
+
+    <!-- BAB 3 : TABEL -->
+    <section class="bab">
+        <h1>Bab 3 — Tabel</h1>
+        <h2><p style="font-weight: normal; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia explicabo dolorum minima impedit alias atque neque eius quae maxime, nulla fugit quasi obcaecati soluta deleniti sit reprehenderit suscipit? Iusto, ea! Table :</p></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Umur</th>
+                    <th>Kelas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Udin</td>
+                    <td>19</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>Bowo</td>
+                    <td>23</td>
+                    <td>A</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- BAB 4 : SELECT BUAH -->
+    <section class="bab">
+        <h1>Bab 4 — Select</h1>
+        <h2><p style="font-weight: normal; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia explicabo dolorum minima impedit alias atque neque eius quae maxime, nulla fugit quasi obcaecati soluta deleniti sit reprehenderit suscipit? Iusto, ea! Select :</p></h2>
+
+        <fieldset>
+            <legend><strong>🍓 Nama-nama Buah</strong></legend>
+            <select onchange="tampilGambar(this.value)">
+                <option value="">-- Pilih Buah --</option>
+                <option value="pisang">🍌 Pisang</option>
+                <option value="apel">🍎 Apel</option>
+                <option value="jeruk">🍊 Jeruk</option>
+                <option value="semangka">🍉 Semangka</option>
+            </select>
+            <br><br>
+            <img id="gambarBuah" src="" alt="" width="200" style="display:none; border-radius: 8px;">
+            <p id="namaBuah" style="font-weight: bold; text-align: center;"></p>
+        </fieldset>
+    </section>
+
+    <script>
+        function tampilGambar(buah) {
+            const gambar = document.getElementById('gambarBuah');
+            const nama = document.getElementById('namaBuah');
+            const buahData = {
+                pisang:   { src: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Chocolate-Chip-Cookies-1.jpg', nama: '🍌 Pisang' },
+                apel:     { src: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg', nama: '🍎 Apel' },
+                jeruk:    { src: 'https://upload.wikimedia.org/wikipedia/commons/4/43/Oranges_and_orange_juice.jpg', nama: '🍊 Jeruk' },
+                semangka: { src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Watermelon_seedless_%28Citrullus_lanatus%29.jpg', nama: '🍉 Semangka' }
+            };
+            if (buah && buahData[buah]) {
+                gambar.src = buahData[buah].src;
+                gambar.alt = buahData[buah].nama;
+                gambar.style.display = 'block';
+                nama.textContent = buahData[buah].nama;
+            } else {
+                gambar.style.display = 'none';
+                gambar.src = '';
+                nama.textContent = '';
+            }
+        }
+    </script>
+
+</body>
+</html>
